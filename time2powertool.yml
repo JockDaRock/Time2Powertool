@@ -1,0 +1,9 @@
+provider:
+  name: faas
+  gateway: http://localhost:8080
+  network: "func_functions" # this is optional and defaults to func_functions
+
+functions:
+  powertool:
+    fprocess: python3 time2powertool.py
+    image: jockdarock/power-tool:latest
